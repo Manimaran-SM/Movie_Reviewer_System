@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+ <head>
+  <title>havefun exploring</title>
+ </head>
+ <body>
+  <link rel="stylesheet" href="../static/index1.css">
+   <form method="POST" action="/submit" >
+     <div class="container">
+      <label> <input name="search" type="search" id="autoComplete" autocomplete="off" placeholder="Enter Review....." id="search"></label>
+       <label><button class="button" action="Calculate">Submit</button></label>
+   <h2 name="h2"
+   style="padding: 10px 20px; font-size: 20px; color: brown;
+       text-align: center; font-style: italic;
+       font-family: Georgia, 'Times New Roman', Times, serif;
+       font-weight: 540; text-decoration: navy;
+       background-color: whitesmoke; border-radius: 12px;
+       box-shadow: 0 px #999;
+       opacity:0.6;">
+      {% if message %}
+      {{ message | safe }}
+      {% endif %}
+    </h2>
+   </div>
+  </form>
+</body>
+</html>
