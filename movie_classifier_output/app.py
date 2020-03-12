@@ -8,11 +8,13 @@ def index():
 
 @app.route('/submit',methods=['POST'])
 def submit():
+    input=[]
     search=request.form['search']
     if(search==''):
         return render_template('index.html',message='please enter text Review')
     else:
-        Prediction,percentage=predict(search)
+        input.append(search)
+        Prediction,percentage=predict(input)
         return render_template('index.html',message='Prediction: %s <br> Probability: %.2f%%' %(Prediction,percentage))
 
 if __name__ == '__main__':
