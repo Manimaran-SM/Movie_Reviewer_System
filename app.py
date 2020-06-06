@@ -18,4 +18,7 @@ def submit():
         return render_template('index.html',message='Prediction: %s <br> Probability: %.2f%%' %(Prediction,percentage))
 
 if __name__ == '__main__':
+    import warnings
+    warnings.warn("use 'python -m nltk', not 'python -m nltk.downloader'",DeprecationWarning)
     app.run(debug=True)
+    
