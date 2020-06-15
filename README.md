@@ -19,22 +19,22 @@
 
 # Overview:
 ## Introduction
-> Movie reviewer system is quite different from all other system related to movies.It gets input from user in form of text of any length and predicts the output as positive or negative. It also provides an additional feature based on the given dataset, it can give the correctness of the prediction. It gets the input from the user processes it using Hashing vectorizer and converts it to matrix of token occurences.
-> <br>[NLTK.corpus.stopwords](https://www.geeksforgeeks.org/removing-stop-words-nltk-python/) comes into play in removing words from the processed data which are considered to be useless. we would not want these words to take up space in our system, or taking up valuable processing time. [Flask](https://flask.palletsprojects.com/en/1.1.x/) enables it to become a web application in which the user can interact. 
+  >* Movie reviewer system is quite different from all other system related to movies.It gets input from user in form of text of any length and predicts the output as positive or negative. It also provides an additional feature based on the given dataset, it can give the correctness of the prediction. It gets the input from the user processes it using Hashing vectorizer and converts it to matrix of token occurences.
+  >* [NLTK.corpus.stopwords](https://www.geeksforgeeks.org/removing-stop-words-nltk-python/) comes into play in removing words from the processed data which are considered to be useless. we would not want these words to take up space in our system, or taking up valuable processing time. [Flask](https://flask.palletsprojects.com/en/1.1.x/) enables it to become a web application in which the user can interact. 
 
 ## Why_this_Algorithm
-> I used SGD Classifier([Stochastic Gradient Descent](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.SGDClassifier.html)) due to its simplicity and ease of implementation and also It has been considered as the efficient algorithm for training models related to Text classification. It supports multiple loss function and more suitable for training a model.
-> <br>It also includes concept of natural language processing such as [hashingvectorizer](https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.HashingVectorizer.html) due to its ability to apply a hashing function to term frequency counts in each document. Moreover you can ask i could've chose tfidfvectorizer instead, but due to dataset an d problem domain constraints, I didn't chose tfidfvectorizer for the following reason tfidf scales those term frequency counts in each document by penalising terms that appear more widely across the corpus. 
+  >* I used SGD Classifier([Stochastic Gradient Descent](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.SGDClassifier.html)) due to its simplicity and ease of implementation and also It has been considered as the efficient algorithm for training models related to Text classification. It supports multiple loss function and more suitable for training a model.
+  >* It also includes concept of natural language processing such as [hashingvectorizer](https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.HashingVectorizer.html) due to its ability to apply a hashing function to term frequency counts in each document. Moreover you can ask i could've chose tfidfvectorizer instead, but due to dataset an d problem domain constraints, I didn't chose tfidfvectorizer for the following reason tfidf scales those term frequency counts in each document by penalising terms that appear more widely across the corpus. 
   
 
 ## Challenges_Faced
-  > First and foremost thing is that you have to install all necessary IDE's, packages, etc..,.
-  > It is hard working with the dataset and i managed it to do so and that instructions will be directed in [procedures](#procedure).
-  > Time to compile every part of the code using for loop and training part takes more time depending on your system processor. It is mandatory that you stay patient still it gets fully compiled. There is a high chances in overloading your RAM if it is 2Gb or lesser.
-  > Regular expresion generation is pretty much a complicated task it is done to eliminate the emoticons or expression from the text. 
-  > Do refer flask documentation affixed above before running [app.py](https://github.com/Manimaran-SM/Movie_Reviewer_System/blob/master/app.py) file
-  > This system being a heavy project cannot be deployed globally due to drawback of dataset.
-  > <br>Kindly refer this documentation linked above in blue text and understand the parameters and concepts before using it in your system. 
+  >* First and foremost thing is that you have to install all necessary IDE's, packages, etc..,.
+  >* It is hard working with the dataset and i managed it to do so and that instructions will be directed in [procedures](#procedure).
+  >* Time to compile every part of the code using for loop and training part takes more time depending on your system processor. It is mandatory that you stay patient still it gets fully compiled. There is a high chances in overloading your RAM if it is 2Gb or lesser.
+  >* Regular expresion generation is pretty much a complicated task it is done to eliminate the emoticons or expression from the text. 
+  >* Do refer flask documentation affixed above before running [app.py](https://github.com/Manimaran-SM/Movie_Reviewer_System/blob/master/app.py) file
+  >* This system being a heavy project cannot be deployed globally due to drawback of dataset.
+  >* Kindly refer this documentation linked above in blue text and understand the parameters and concepts before using it in your system. 
 
 
 ## Limitation
@@ -101,4 +101,4 @@ pip install flask
 
 ## Dataset
 
->Refer in this repostory or click here [dataset](http://ai.stanford.edu/~amaas/data/sentiment/aclImdb_v1.tar.gz). It just holds the text reviews from various sites under a single .tarz file
+>* Refer in this repostory or click here [dataset](http://ai.stanford.edu/~amaas/data/sentiment/aclImdb_v1.tar.gz). It just holds the text reviews from various sites under a single .tarz file
