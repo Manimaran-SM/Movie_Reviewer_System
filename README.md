@@ -19,45 +19,47 @@
 
 # Overview:
 ## Introduction
->Fake news is a major concern in our society right now. It has gone hand-in-hand with the rise of the data-driven era – not a coincidence when you consider the sheer volume of data we are generating every second! Fake news is such a widespread issue that even the world’s leading dictionaries are trying to combat it in their own way.
->I’ve been working in the Machine learning (ML) space and so i proposed a system which would analyze the fake news using classification algorithm and report it back 
+> Movie reviewer system is quite different from all other system related to movies.It gets input from user in form of text of any length and predicts the output as positive or negative. It also provides an additional feature based on the given dataset, it can give the correctness of the prediction. It gets the input from the user processes it using Hashing vectorizer and converts it to matrix of token occurences.
+> <br>[NLTK.corpus.stopwords](https://www.geeksforgeeks.org/removing-stop-words-nltk-python/) comes into play in removing words from the processed data which are considered to be useless. we would not want these words to take up space in our system, or taking up valuable processing time. [Flask](https://flask.palletsprojects.com/en/1.1.x/) enables it to become a web application in which the user can interact. 
 
 ## Why_this_Algorithm
-  >I used Passive Aggressive Classifier. Passive-aggressive classification is one of the available incremental learning algorithms and it is very simple to implement, since it has a closed-form update rule.
-  >refer this for detailed description [passive_aggressive_classifier](https://www.bonaccorso.eu/2017/10/06/ml-algorithms-addendum-passive-aggressive-algorithms/)
-  >Here is another key term text "Term frequency and inverse document frequency". 
-  <br>Term Frequency measures the frequency of a word in a document. This highly depends on the length of the document and the generality of word. 
-  <br>```tf(t,d) = count of t in d / number of words in d ```
-  <br>DF is the number of documents in which the word is present. IDF is the inverse of the document frequency which measures the informativeness of term t.
-  <br>```df(t) = occurrence of t in documents```
-  <br>```idf(t) = N/df```
+> I used SGD Classifier([Stochastic Gradient Descent](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.SGDClassifier.html)) due to its simplicity and ease of implementation and also It has been considered as the efficient algorithm for training models related to Text classification. It supports multiple loss function and more suitable for training a model.
+> <br>It also includes concept of natural language processing such as [hashingvectorizer](https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.HashingVectorizer.html) due to its ability to apply a hashing function to term frequency counts in each document. Moreover you can ask i could've chose tfidfvectorizer instead, but due to dataset an d problem domain constraints, I didn't chose tfidfvectorizer for the following reason tfidf scales those term frequency counts in each document by penalising terms that appear more widely across the corpus. 
   
 
 ## Challenges_Faced
-  >I found it hard working with the data extraction feature. Since the version varied it kind of affected the required accuracy of the system.
-  >Kindly refer this documentation [TFIDFVectorizer](https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.TfidfVectorizer.html) and understand the parameters before using it in your system. 
+  > First and foremost thing is that you have to install all necessary IDE's, packages, etc..,.
+  > It is hard working with the dataset and i managed it to do so and that instructions will be directed in [procedures](#procedure).
+  > Time to compile every part of the code using for loop and training part takes more time depending on your system processor. It is mandatory that you stay patient still it gets fully compiled. There is a high chances in overloading your RAM if it is 2Gb or lesser.
+  > Regular expresion generation is pretty much a complicated task it is done to eliminate the emoticons or expression from the text. 
+  > Do refer flask documentation affixed above before running [app.py](https://github.com/Manimaran-SM/Movie_Reviewer_System/blob/master/app.py) file
+  > This system being a heavy project cannot be deployed globally due to drawback of dataset.
+  > <br>Kindly refer this documentation linked above in blue text and understand the parameters and concepts before using it in your system. 
 
 
 ## Limitation
-  >* This system cannot accept inputs from user. 
-  >* It is not compatable for deploying.
-  >* It also requires much more understanding of the dataset
-  
+  >* The collisions can introduce too much noise in the data and degrade prediction quality, There is no easy way to inverse the mapping and find the feature names from the feature index.This system cannot accept inputs from user. 
+  >* It is not compatable for deploying due to the dataset being very heavy in the sense it takes more than 400MB on disc memory it will lead to application error.
+  >* SGD requires a number of hyperparameters such as the regularization parameter and the number of iterations. SGD is very sensitive to feature scaling.
+  >* It takes more time to run the code.
 
 # Guide:
 ## Procedure
 >* Click clone/download
 >* If you github desktop click open in desktop hit the clone button. 
 >* If you use download zip, then extract the zip file  
->* If you want to use HTTPS say (https://github.com/Manimaran-SM/Fake_News_Detection.git),  then use the command
+>* If you want to use HTTPS say (https://github.com/Manimaran-SM/Movie_Reviewer_System.git),  then use the command
 ``` 
-$ git clone https://github.com/Manimaran-SM/Fake_News_Detection.git
+$ git clone https://github.com/Manimaran-SM/Movie_Reviewer_System.git
 ```
 ### Note:
 * If you have problem related with git command refer this documentation [link](https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository)
 >* After completing the above steps, You must have anaconda or jupyter notebook to execute this code.
->* Now run the [file1.pynb](https://github.com/Manimaran-SM/Fake_News_Detection/blob/master/file1.ipynb) file. You wil get output as shown in the above file.
->* If you have any problems regarding this repository while opening feel free ask me [here](https://github.com/Manimaran-SM/Fake_News_Detection/issues/new)
+>* I will be explaining the procedures for jupyter notebook both follows same instruction, Open jupyter notebook, your default browser opens up ], Navigate to your local repository containing this project.
+>* Once you are there, first open and run the [movieclassifier.ipynb](https://github.com/Manimaran-SM/Movie_Reviewer_System/blob/master/movie_classifier.ipynb) file. Second,  open and run the [pandadataframe.ipynb](https://github.com/Manimaran-SM/Movie_Reviewer_System/blob/master/Panda_data_frame.ipynb) file. finally, go to the windows explorer open folder containing the [app.py](https://github.com/Manimaran-SM/Movie_Reviewer_System/blob/master/app.py) file. open the file You will get a link like this http://127.0.0.1:5000/ . copy paste this to your browser and give your input and check for output.
+>* Sample outputs:
+
+>* If you have any problems regarding this repository or while opening or while running the files feel free ask me [here](https://github.com/Manimaran-SM/Movie_Reviewer_System/issues/new) with the issues you are facing
 
 ## Prerequisite
 Install Numpy with:
@@ -85,6 +87,11 @@ Install nltk with:
 ```
 pip install nltk
 ```
+Install flask with:
+
+```
+pip install flask
+```
 ## Note:
 >* python IDE and Following packages must be installed in system:
 >* Given commands works only for windows
@@ -92,4 +99,4 @@ pip install nltk
 
 ## Dataset
 
->Refer in this repostory or click here [dataset](http://ai.stanford.edu/~amaas/data/sentiment/aclImdb_v1.tar.gz)
+>Refer in this repostory or click here [dataset](http://ai.stanford.edu/~amaas/data/sentiment/aclImdb_v1.tar.gz). It just holds the text reviews from various sites under a single .tarz file
