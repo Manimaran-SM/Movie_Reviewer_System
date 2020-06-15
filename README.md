@@ -52,14 +52,16 @@
 ``` 
 $ git clone https://github.com/Manimaran-SM/Movie_Reviewer_System.git
 ```
-### Note:
-* If you have problem related with git command refer this documentation [link](https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository)
 >* After completing the above steps, You must have anaconda or jupyter notebook to execute this code.
 >* I will be explaining the procedures for jupyter notebook both follows same instruction, Open jupyter notebook, your default browser opens up ], Navigate to your local repository containing this project.
 >* Once you are there, first open and run the [movieclassifier.ipynb](https://github.com/Manimaran-SM/Movie_Reviewer_System/blob/master/movie_classifier.ipynb) file. Second,  open and run the [pandadataframe.ipynb](https://github.com/Manimaran-SM/Movie_Reviewer_System/blob/master/Panda_data_frame.ipynb) file. finally, go to the windows explorer open folder containing the [app.py](https://github.com/Manimaran-SM/Movie_Reviewer_System/blob/master/app.py) file. open the file You will get a link like this http://127.0.0.1:5000/ . copy paste this to your browser and give your input and check for output.
->* Sample outputs:
+>* If you have any problems regarding this repository or while opening or while running the files, feel free ask me [here](https://github.com/Manimaran-SM/Movie_Reviewer_System/issues/new) with the issues you are facing.
+## Sample outputs:
+<p align="center"><img src="https://github.com/Manimaran-SM/Movie_Reviewer_System/blob/master/sampleoutput1.png" width="1000" height="500"><br><img src="https://github.com/Manimaran-SM/Movie_Reviewer_System/blob/master/sampleoutput2.png" width="1000" height="500">
+</p>
 
->* If you have any problems regarding this repository or while opening or while running the files feel free ask me [here](https://github.com/Manimaran-SM/Movie_Reviewer_System/issues/new) with the issues you are facing
+### Note:
+* If you have problem related with git command refer this documentation [link](https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository)
 
 ## Prerequisite
 Install Numpy with:
