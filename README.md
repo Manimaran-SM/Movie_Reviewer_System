@@ -12,9 +12,11 @@
    * [Limitation](#Limitation)
    
 * [Guide](#Guide)
+  * [System Configuration](#System_Configuration)
   * [Procedure](#Procedure)
   * [Pre-requisite](#Prerequisite)
   * [Dataset](#Dataset)
+  
 
 
 # Overview:
@@ -38,12 +40,19 @@
 
 
 ## Limitation
-  >* The collisions can introduce too much noise in the data and degrade prediction quality, There is no easy way to inverse the mapping and find the feature names from the feature index.This system cannot accept inputs from user. 
-  >* It is not compatable for deploying due to the dataset being very heavy in the sense it takes more than 400MB on disc memory it will lead to application error.
+  >* The collisions can introduce too much noise in the data and degrade prediction quality. There is no easy way to inverse the mapping and find the feature names from the feature index.
   >* SGD requires a number of hyperparameters such as the regularization parameter and the number of iterations. SGD is very sensitive to feature scaling.
-  >* It takes more time to run the code.
-
+  
+  
 # Guide:
+
+## System_Configuration
+>* Graphic card: NVIDIA GeForce GTX1050
+>* CPU: Intel(R) Core(TM) i7-8750H CPU @ 2.20GHz
+>* RAM: 8GB
+>* Disksapce: 1TB
+
+
 ## Procedure
 >* Click clone/download
 >* If you github desktop click open in desktop hit the clone button. 
@@ -95,10 +104,11 @@ Install flask with:
 pip install flask
 ```
 ## Note:
->* python IDE and Following packages must be installed in system:
+>* Python IDE and Following packages must be installed in system:
 >* Given commands works only for windows
->* pip install pickle not required for python v3.7 for sure    
+>* pip install pickle not required for python v3.7 or above    
 
 ## Dataset
 
 >* Refer in this repostory or click here [dataset](http://ai.stanford.edu/~amaas/data/sentiment/aclImdb_v1.tar.gz). It just holds the text reviews from various sites under a single .tarz file
+
