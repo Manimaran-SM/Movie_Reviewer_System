@@ -3,6 +3,9 @@
   Movie Reviewer System
 </h1>
 
+![Python](https://img.shields.io/badge/Python-3.8-blueviolet)
+![Framework](https://img.shields.io/badge/Framework-Flask-red)
+![Frontend](https://img.shields.io/badge/Frontend-HTML/CSS/JS-green)
 [![MIT License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat)](https://github.com/Manimaran-SM/Movie_Reviewer_System/blob/master/LICENSE)
 
 * [Overview](#Overview)
