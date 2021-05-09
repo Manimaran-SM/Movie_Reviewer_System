@@ -29,7 +29,7 @@
 
 ## Why_this_Algorithm
   >* I used SGD Classifier([Stochastic Gradient Descent](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.SGDClassifier.html)) due to its simplicity and ease of implementation and also It has been considered as the efficient algorithm for training models related to Text classification. It supports multiple loss function and more suitable for training a model.
-  >* It also includes concept of natural language processing such as [hashingvectorizer](https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.HashingVectorizer.html) due to its ability to apply a hashing function to term frequency counts in each document. Moreover you can ask i could've chose tfidfvectorizer instead, but due to dataset an d problem domain constraints, I didn't chose tfidfvectorizer for the following reason tfidf scales those term frequency counts in each document by penalising terms that appear more widely across the corpus. 
+  >* It also includes concept of natural language processing such as [hashingvectorizer](https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.HashingVectorizer.html) due to its ability to apply a hashing function to term frequency counts in each document. Moreover you can ask i could've chose tfidfvectorizer instead, but due to dataset and problem domain constraints, I didn't chose tfidfvectorizer for the following reason tfidf scales those term frequency counts in each document by penalising terms that appear more widely across the corpus. 
   
 
 ## Challenges_Faced
